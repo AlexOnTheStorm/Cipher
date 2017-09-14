@@ -5,6 +5,7 @@ public abstract class MyCipher { //абстрактный класс для вс
     public abstract char Method(char s); //абстрактный метод, описывающий, как менять символы в строке
     public abstract void Option(boolean f); //абстрактный метод, который уточняет параметры шифрования
     public abstract void DeCipher(boolean f); //абстрактный метод, указывающий, прямое шифрование или обратное
+    
     public String Cipherification(String original, boolean f){
 
         String secret = "";
