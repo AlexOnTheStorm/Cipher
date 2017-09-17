@@ -1,5 +1,7 @@
 package first;
 
+import java.util.Scanner;
+
 public class ByteInverse extends MyCipher implements EnterInterface {
 
     public static byte sdvig; //на сколько бит сдвинуть

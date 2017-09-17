@@ -1,5 +1,7 @@
 package first;
 
+import java.util.Scanner;
+
 public class CeasarCipher extends MyCipher implements EnterInterface{
 
     String alphabet = "abcdefghijklmnopqrstuvwxyz"; //английский строчный

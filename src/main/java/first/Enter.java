@@ -1,8 +1,11 @@
 package first;
 
 
+import java.util.Scanner;
+
 public class Enter implements EnterInterface{
 
+    public static Scanner myKeyboard = new Scanner(System.in);
     public static String original = ""; //оригинальная строка
 
     public static void SuperSecretCipher(){

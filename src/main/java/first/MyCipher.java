@@ -1,5 +1,7 @@
 package first;
 
+import java.util.Scanner;
+
 public abstract class MyCipher { //абстрактный класс для всех методов шифрования
 
     public abstract char Method(char s); //абстрактный метод, описывающий, как менять символы в строке
