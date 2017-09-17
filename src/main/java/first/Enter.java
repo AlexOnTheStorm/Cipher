@@ -2,9 +2,7 @@ package first;
 
 
 
-import java.util.Scanner;   
-
-//public class Enter implements EnterInterface{
+import java.util.Scanner;
 
 public class Enter {
 

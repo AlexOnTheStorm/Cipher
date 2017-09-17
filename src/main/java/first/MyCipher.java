@@ -1,6 +1,5 @@
 package first;
 
-import java.util.Scanner;
 
 public abstract class MyCipher { //абстрактный класс для всех методов шифрования
 

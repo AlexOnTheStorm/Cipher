@@ -1,8 +1,7 @@
 package first;
 
-import java.util.Scanner;
 
-public class CeasarCipher extends MyCipher implements EnterInterface{
+public class CeasarCipher extends MyCipher {
 
     String alphabet = "abcdefghijklmnopqrstuvwxyz"; //английский строчный
     String capalphabet = "ABCDEFGHIJKLMNOPRSTUVWXYZ"; //английский заглавный
@@ -15,7 +14,7 @@ public class CeasarCipher extends MyCipher implements EnterInterface{
 
         if (f) {
             System.out.println("На сколько символов сдвинуть? (1-33 для русской строки, 1-25 для английской)");
-            sdvig = Integer.valueOf(myKeyboard.nextLine());
+            sdvig = Integer.valueOf(Enter.myKeyboard.nextLine());
         }
     }
 

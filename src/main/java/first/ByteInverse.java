@@ -1,8 +1,7 @@
 package first;
 
-import java.util.Scanner;
 
-public class ByteInverse extends MyCipher implements EnterInterface {
+public class ByteInverse extends MyCipher {
 
     public static byte sdvig; //на сколько бит сдвинуть
     public static boolean flag = true; //флаг, показывающий, прямое шифрование или обратное
@@ -10,7 +9,7 @@ public class ByteInverse extends MyCipher implements EnterInterface {
 
         if (f) {
             System.out.println("На сколько символов сдвинуть? (1-5 для русской строки, 1-9 для английской)");
-            sdvig = Byte.valueOf(myKeyboard.nextLine());
+            sdvig = Byte.valueOf(Enter.myKeyboard.nextLine());
         }
     }
     public void DeCipher(boolean f){
