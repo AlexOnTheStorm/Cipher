@@ -1,7 +1,7 @@
 package first;
 
 
-public class Enter implements EnterInterface{
+public class Enter {
 
     public static String original = ""; //оригинальная строка
 
@@ -15,15 +15,11 @@ public class Enter implements EnterInterface{
             System.out.println("Выберете действие: 1 - шифр Цезаря, 2 - битовый сдвиг, 3 - ввести новую строку");
             switch (myKeyboard.nextLine()){
                 case "1": {
-                    CeasarCipher ceaser = new CeasarCipher(); //объект класса шифр Цезаря
-                    secret = ceaser.Cipherification(original, true); //передача строки и флага прямого шифрования в метод шифрования
-                    backoriginal = ceaser.Cipherification(secret, false); //передача строки и флага дешифрования в метод шифрования
+                    backoriginal = cipherificationWithMethod(new CeasarCipher(), secret);
                     break;
                 }
                 case "2": {
-                    ByteInverse bitCipher = new ByteInverse(); //объект класса битового сдвига
-                    secret = bitCipher.Cipherification(original, true); //передача строки и флага прямого шифрования в метод шифрования
-                    backoriginal = bitCipher.Cipherification(secret, false); //передача строки и флага дешифрования в метод шифрования
+                    backoriginal = cipherificationWithMethod(new ByteInverse(), secret);
                     break;
                 }
                 case "3": {
@@ -35,6 +31,12 @@ public class Enter implements EnterInterface{
             System.out.println("Зашифрованное сообщение - " + secret); //вывод в консоль
             System.out.println("Расшифрованное сообщение - " + backoriginal);
         } while (true); //бесконечный цикл
+    }
+    
+   
+    private static String cipherificationWithMethod(MyCipher cipher, String secret) {
+         secret = cipher.Cipherification(original, true); //передача строки и флага прямого шифрования в метод шифрования
+         return cipher.Cipherification(secret, false);
     }
 
     public static String Vvod()
